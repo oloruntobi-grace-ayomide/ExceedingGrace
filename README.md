@@ -28,6 +28,6 @@ Exceeding Grace Daycare offers a safe, loving, and inspiring space where childre
 1. Clone the repository:
    ```bash
    git clone https://github.com/oloruntobi-grace-ayomide/ExceedingGrace.git
-   cd ExceedingGracedaycare
+   cd ExceedingGrace
    npm install
    npm run dev
