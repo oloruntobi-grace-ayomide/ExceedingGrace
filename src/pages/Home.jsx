@@ -54,6 +54,7 @@ const Home = () => {
                 <div className="home-banner-img" data-aos="fade-left">
                     <img src={IMAGES.crawlingBaby} alt="baby crawling" />
                 </div>
+
             </section>
 
             <section className="features-section parent" data-aos="fade-up">

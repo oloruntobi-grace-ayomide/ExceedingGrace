@@ -50,6 +50,7 @@ body {
 
 /* Navigation */
 
+
 .navbar-container {
   position: fixed;
   top: 0;
@@ -105,6 +106,7 @@ body {
     font-weight:600;
     font-size:15px;
     padding:5px 2px;
+    /* color:#888888; */
     color:var(--deep-pink-color);
     border-bottom:solid 2px transparent;
     transition:border 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -831,7 +833,8 @@ body {
 
 .pages-hero-section.program h1,
 .pages-hero-section.program p {
-  color:var(--white-color);
+  /* color:var(--white-color); */
+  color:var(--deep-pink-color);
 }
 
 .programs-overview {
@@ -1583,7 +1586,7 @@ option[disabled], input[type="date"] {
   font-size:25px;
 }
 
-/* join -our famil */
+/* join -our famiy */
 
 .join-family-section .join-family-description {
   max-width:80%;
@@ -1603,13 +1606,11 @@ option[disabled], input[type="date"] {
 }
 
 .footer-list li,
-.footer-text {
+.footer-text,
+.footer-link{
   font-size:15px;
 }
 
-.footer-link {
-  font-size:15px;
-}
 
 /* General utilities */
 .pages-hero-section h1 {
@@ -1631,6 +1632,10 @@ option[disabled], input[type="date"] {
 .values-section .values-grid {
   grid-template-columns: repeat(2, 1fr);
   row-gap:30px;
+}
+
+.mission-vision-section .mission-vision-img img {
+  width:100%;
 }
 
 .team-section h2{
@@ -1707,11 +1712,8 @@ option[disabled], input[type="date"] {
   column-gap:25px;
 }
 
-.requirements-section .requirement-body-content p {
-  font-size:17px;
-}
-
-.requirements-section .requirement-body-content li {
+.requirements-section .requirement-body-content p,
+.requirements-section .requirement-body-content li{
   font-size:17px;
 }
 
@@ -1791,9 +1793,268 @@ option[disabled], input[type="date"] {
 
 }
 
-@media (max-width: 940px) and (min-width: 800px) {}
+@media (max-width: 940px) and (min-width: 800px) {
+.parent {
+  padding-left:30px;
+  padding-right:30px;
+}
 
-@media screen and (max-width: 880px){}
+.logo img{
+    width:70px;
+}
+
+.home-banner-content {
+  width:65%;
+}
+
+.home-banner-content h1{
+  font-size:36px;
+}
+
+.home-banner-content p {
+  font-size:16.3px;
+  width:85%;
+}
+
+.home-banner-img img{
+  width:300px;
+}
+
+.features-section .features-subtitle {
+  max-width:70%;
+}
+
+.programs-section .programs-subtitle {
+  max-width:75%;
+}
+
+.testimonial-section .testimonials-subtitle {
+  max-width:70%;
+}
+
+.join-family-section .join-family-description {
+  max-width:82%;
+}
+
+.footer-logo-name h4 {
+  font-size:20px;
+}
+
+.footer-logo {
+  width:90px;
+}
+
+.footer-heading {
+  font-size:17px;
+}
+
+.footer-list li,
+.footer-text,
+.footer-link{
+  font-size:14px;
+}
+
+.footer-bottom {
+  font-size:15px;
+}
+
+.mission-vision-section {
+  grid-template-columns: 55% 40%;
+}
+
+.mission-vision-section .mission-vision-content h2{
+  font-size:33px;
+}
+
+.mission-vision-section .mission-vision-content p {
+  font-size:16.2px;
+}
+
+.team-section .team-grid {
+  grid-template-columns:1fr;
+  row-gap:30px;
+}
+
+.team-section .team-grid .grid-card {
+  width:85%;
+  margin:auto;
+}
+
+.team-section .team-grid .grid-card .avatar{
+  width:170px;
+  height:170px;
+}
+
+.team-section .team-grid .grid-card p.bio {
+  width:80%;
+  margin:auto;
+}
+
+.programs-overview .program-item {
+  column-gap:5%;
+}
+
+.programs-overview .program-details {
+  width: 54%;
+}
+
+}
+
+@media (max-width:940px) {
+.programs-section .programs-grid {
+  grid-template-columns: 1fr;
+  gap:25px;
+}
+
+.programs-section .program-card {
+  text-align: center;
+  width:90%;
+  margin:auto;
+  padding:32px;
+}
+
+.programs-section .program-icon {
+  margin: auto;
+  margin-bottom:20px;
+}
+
+.programs-section .program-description {
+  width:80%;
+  margin:auto;
+  margin-bottom:12px;
+}
+
+.footer-heading {
+  margin-bottom:10px;
+}
+
+/* General utilities */
+.pages-hero-section h1 {
+  font-size:44px;
+}
+
+.pages-hero-section p {
+  font-size:17px;
+}
+
+.mission-vision-section {
+  grid-template-columns: 55% 40%;
+}
+
+.mission-vision-section .mission-vision-content h2{
+  font-size:33px;
+}
+
+.mission-vision-section .mission-vision-content p {
+  font-size:16.2px;
+}
+
+.team-section .team-grid {
+  grid-template-columns:1fr;
+  row-gap:30px;
+}
+
+.team-section .team-grid .grid-card {
+  width:85%;
+  margin:auto;
+}
+
+.team-section .team-grid .grid-card .avatar{
+  width:170px;
+  height:170px;
+}
+
+.team-section .team-grid .grid-card p.bio {
+  width:80%;
+  margin:auto;
+}
+
+.special-programs .special-grid {
+  grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+}
+
+.special-programs .special-grid > :nth-child(3):nth-last-child(1) {
+    grid-column: 1 / -1;
+}
+
+.enrollment-section .step-item {
+  column-gap:15px;
+}
+
+.enrollment-section .step-number {
+  height:50px;
+  width:50px;
+  font-size:16px;
+}
+
+.enrollment-section .step-info h3 {
+  font-size:17px;
+}
+
+.enrollment-section .step-info p {
+  font-size:16px;
+}
+
+.requirements-section {
+  column-gap:15px;
+}
+
+.requirements-section .requirement-body-content h2 {
+  font-size:25px;
+}
+
+.requirements-section .requirement-body-content p,
+.requirements-section .requirement-body-content li{
+  font-size:15.5px;
+}
+
+.requirements-section .requirement-body-content li .soft-green {
+  font-size:18px;
+}
+
+.requirements-section .form-list div span,
+.requirements-section .form-list div .icon {
+  font-size:15.5px;
+}
+
+.cta-section h2,
+.faq-contact-section h2.faq-contact-heading {
+  font-size:35px;
+}
+
+.cta-section p,
+.faq-contact-section p.faq-contact-subheading{
+  font-size:17px;
+  width:85%;
+}
+
+.quick-info-section .quick-info-grid {
+  column-gap:15px;
+  grid-template-columns:1fr;
+}
+
+.quick-info-section .quick-info-card{
+  padding:15px 12px;
+  width:80%;
+  margin: auto;
+}
+
+.faq-contact-section {
+  margin-top:60px;
+}
+
+.faq-contact-section .faq-contact-grid {
+  width:95%;
+}
+
+.faq-contact-section .faq-contact-card {
+  padding:27px 12px;
+}
+
+.faq-contact-section .faq-contact-card p {
+  font-size:16px;
+}
+}
 
 @media screen and (max-width:800px) {
 
@@ -1829,6 +2090,7 @@ option[disabled], input[type="date"] {
   background-color:var(--white-color);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: left 0.5s ease-in-out; 
+  overflow-y: auto;
 }
 
 .nav-open {
@@ -1836,18 +2098,297 @@ option[disabled], input[type="date"] {
 }
 
 .nav-links-container li{
-  margin-bottom:20px;
+  width:fit-content;
+  margin-bottom:15px;
 }
 
 .nav-links {
-    display: block;
+  display: block;
 }
 
 }
 
-@media screen and (max-width: 799px) and (min-width: 715px) {}
+@media screen and (max-width:800px) {
+.philosophy-section .philosophy-grid {
+  grid-template-columns:1fr;
+  row-gap:25px;
+}
 
-@media screen and (max-width: 715px) and (min-width: 600px){}
+.philosophy-section .philosophy-img {
+  display: flex;
+  justify-content: center;
+  height:350px;
+}
+
+.philosophy-section .philosophy-img  img{
+  width:70%;
+}
+
+.philosophy-section .text-block {
+  text-align: center;
+}
+
+.team-section .team-grid .grid-card {
+  width:90%;
+  margin:auto;
+}
+}
+
+@media screen and (max-width: 800px) and (min-width: 715px) {
+.parent {
+  padding-left:25px;
+  padding-right:25px;
+}
+
+.logo img{
+  width:65px;
+}
+
+.home-banner-content h1{
+  font-size:34px;
+}
+
+.home-banner-content p {
+  font-size:16px;
+  width:90%;
+}
+
+.home-banner-img img{
+  width:270px;
+}
+
+.features-section .features-subtitle {
+  max-width:85%;
+}
+
+.programs-section .programs-subtitle {
+  max-width:80%;
+}
+
+.testimonial-section .testimonials-subtitle {
+  max-width:78%;
+}
+
+.testimonial-section .testimonial-grid {
+  gap:32px 20px;
+}
+
+.testimonial-section .testimonial-card {
+  padding: 2rem 1rem;
+}
+
+.testimonial-section .testimonial-card::before {
+  left:12px;
+}
+
+.testimonial-section .testimonial-comment {
+  padding-left:22px;
+}
+
+.join-family-section .join-family-description {
+  max-width:85%;
+}
+
+.footer-logo-name h4 {
+  font-size:18px;
+}
+
+.footer-logo {
+  width:90px;
+}
+
+.footer-heading {
+  font-size:16.5px;
+}
+
+.footer-list li,
+.footer-text,
+.footer-link{
+  font-size:14px;
+}
+
+.footer-bottom {
+  font-size:14px;
+}
+
+.programs-overview .program-item {
+  column-gap:5%;
+}
+
+.programs-overview .image-placeholder {
+  width:40%;
+  height:380px;
+}
+
+.programs-overview .program-details {
+  width: 55%;
+}
+
+.programs-overview .program-header h2 {
+  font-size:24px;
+}
+
+.faq-contact-section .faq-contact-grid {
+  width:98%;
+}
+
+.faq-contact-section .faq-contact-card {
+  padding:23px 8px;
+}
+
+.faq-contact-section .faq-contact-card p {
+  font-size:15px;
+}
+
+.info-section .info-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media screen and (max-width: 715px) and (min-width: 600px){
+.parent {
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.logo img{
+  width:65px;
+}
+
+.home-banner-content h1{
+  font-size:30px;
+}
+
+.home-banner-content p {
+  font-size:15px;
+  width:95%;
+}
+
+.home-banner-img img{
+  width:220px;
+}
+
+.home-banner-content div {
+  column-gap:10px;
+}
+
+.home-banner-content div a {
+  padding:10px;
+  font-size:14.5px;
+}
+
+.features-section .features-title {
+  font-size:30px;
+}
+
+.features-section .features-subtitle {
+  max-width:88%;
+}
+
+.features-section .features-grid {
+  grid-template-columns:1fr 1fr;
+  row-gap:20px;
+  column-gap:12px;
+}
+
+.features-section .feature-card {
+  padding:12px 10px;
+}
+
+.programs-section .programs-subtitle {
+  max-width:90%;
+}
+
+.testimonial-section .testimonials-subtitle {
+  max-width:90%;
+}
+
+.testimonial-section .testimonial-grid {
+  grid-template-columns:1fr;
+  row-gap:10px;
+}
+
+.testimonial-section .testimonial-card {
+  margin-bottom:10px;
+}
+
+.join-family-section .join-family-description {
+  max-width:92%;
+}
+
+.footer-logo-name h4 {
+  font-size:16.5px;
+}
+
+.footer-logo {
+  width:80px;
+}
+
+.footer-heading {
+  font-size:16px;
+}
+
+.footer-list li,
+.footer-text,
+.footer-link,
+.footer-bottom{
+  font-size:13px;
+}
+
+.pages-hero-section h1 {
+  font-size:37px;
+}
+
+.pages-hero-section p {
+  font-size:16px;
+  width:95%;
+}
+
+.mission-vision-section .mission-vision-content h2{
+  font-size:28px;
+}
+
+.mission-vision-section .mission-vision-content p {
+  font-size:15.5px;
+}
+
+
+  /* 
+
+.programs-overview .program-item {
+  column-gap:5%;
+}
+
+.programs-overview .image-placeholder {
+  width:40%;
+  height:380px;
+}
+
+.programs-overview .program-details {
+  width: 55%;
+}
+
+.programs-overview .program-header h2 {
+  font-size:24px;
+}
+
+.faq-contact-section .faq-contact-grid {
+  width:98%;
+}
+
+.faq-contact-section .faq-contact-card {
+  padding:23px 8px;
+}
+
+.faq-contact-section .faq-contact-card p {
+  font-size:15px;
+}
+
+.info-section .info-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+ */
+}
 
 @media screen  and (max-width:600px){}
 
