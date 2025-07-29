@@ -2441,3 +2441,7 @@ option[disabled], input[type="date"] {
 @media screen  and (max-width:380px){}
 
 @media screen  and (max-width:340px){}
+
+body{
+  background-color: red;
+}
