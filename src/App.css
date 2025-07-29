@@ -89,7 +89,7 @@ body {
 }
 
 .logo img{
-    width:80px;
+    width:75px;
 }
 
 .burger-toggler {
@@ -167,28 +167,38 @@ body {
   width:80%;
 }
 
+
 .home-banner-content div {
   margin-top:20px;
   display:flex;
   column-gap:15px;
 }
 
-.home-banner-content div a {
+.hero-mobile-links {
+  display: none;
+}
+
+
+.home-banner-content div a,
+.hero-mobile-links a{
   padding:15px;
   color:#ffffff;
   font-weight:600;
   border-radius:20px;
 }
 
-.home-banner-content div a.enrol-link {
+.home-banner-content div a.enrol-link,
+.hero-mobile-links a.enrol-link {
   background-color:var(--deep-blue-color);
 }
 
-.home-banner-content div a.programs-link {
+.home-banner-content div a.programs-link,
+.hero-mobile-links a.programs-link {
   background-color:#888888;
 }
 
-.home-banner-content div a:hover {
+.home-banner-content div a:hover,
+.hero-mobile-links a:hover{
   background-color:#CFC3D9;
 }
 
@@ -521,10 +531,10 @@ body {
   color:#ffffff;
 }
 
-.footer-grid {
+.footer-grid,
+.footer-flex-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  /* grid-template-columns: repeat(3, minmax(0, auto)); */
+  grid-template-columns: auto auto;
   justify-content: space-between;
   column-gap:5%;
   margin-bottom:20px;
@@ -544,6 +554,10 @@ body {
 .footer-logo {
   width:100px;
   margin-bottom: 1rem;
+}
+
+.footer-flex-container {
+  margin-bottom:0;
 }
 
 .footer-heading {
@@ -1400,7 +1414,7 @@ body {
   outline:none;
   border:solid 0.5px rgb(136 136 136 / 0.3);
   border-radius:8px;
-  font-size:18px;
+  font-size:15px;
   display: block;
   width:100%;
 }
@@ -1410,15 +1424,11 @@ body {
 }
 
 .form-section .form-container .form-row input::placeholder,
-.form-section .form-container .form-textarea textarea::placeholder{
+.form-section .form-container .form-textarea textarea::placeholder,
+option[disabled], input[type="date"]{
   font-size:15px;
   font-weight:500;
   color: #888888;
-}
-
-option[disabled], input[type="date"] {
-  color:#888888 !important;
-  font-size:15px;
 }
 
 .form-section .form-container .form-row select{ 
@@ -2251,6 +2261,10 @@ option[disabled], input[type="date"] {
   padding-right:20px;
 }
 
+.nav-links-container{
+  width:46%;
+}
+
 .logo img{
   width:65px;
 }
@@ -2430,18 +2444,526 @@ option[disabled], input[type="date"] {
 
 }
 
-@media screen and (max-width:600px) and (min-width:480px) {}
+@media screen and (max-width:600px) {
 
-@media screen and (max-width:480px){}
+.home-banner {
+  flex-direction: column;
+  padding-top:40px;
+  padding-bottom:30px;
+}
 
-@media screen  and (max-width:430px){}  
+.home-banner-content {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-@media screen  and (max-width:400px){} 
+.home-banner-content p {
+  font-size:15.5px;
+  width:98%;
+}
 
-@media screen  and (max-width:380px){}
+.home-banner-content div {
+  justify-content: center;
+}
 
-@media screen  and (max-width:340px){}
+.home-banner-img {
+  margin-left:unset;
+  padding:10px 0px;
+}
 
-body{
-  background-color: red;
+.features-section .features-grid,
+.testimonial-section .testimonial-grid {
+  grid-template-columns: 1fr;
+  row-gap:15px;
+}
+
+.features-section .feature-card {
+  width:90%;
+  margin: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.programs-section .program-card {
+  padding:32px 10px;
+}
+
+.programs-section .program-description {
+  width:95%;
+}
+
+.testimonial-section .testimonial-card {
+  margin-bottom:0;
+}
+
+.testimonial-section .testimonial-card::before {
+  font-size: 3rem;
+  left: 15px;
+}
+
+.testimonial-section .testimonial-comment {
+  padding-left:18px;
+  font-size:15px;
+}
+
+.footer-grid {
+  grid-template-columns: auto;
+  row-gap:10px;
+}
+
+.footer-logo {
+  width:75px;
+  margin-bottom:5px;
+}
+
+.footer-heading {
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.pages-hero-section p {
+  width:98%;
+}
+
+.mission-vision-section {
+  grid-template-columns:1fr;
+  row-gap:10px;
+}
+
+.values-section .values-grid {
+  grid-template-columns:1fr;
+  row-gap:20px;
+}
+
+.values-section .value-card{
+  padding:22px 12px;
+  margin: auto;
+}
+
+.values-section .value-card span {
+  margin-bottom:2px;
+}
+
+.philosophy-section .philosophy-img,
+.philosophy-section .philosophy-img img  {
+  width:100%;
+}
+
+.programs-overview .program-item {
+  flex-direction: column;
+  column-gap:0;
+  row-gap:10px;
+  margin-bottom:60px;
+  margin-top:10px;
+}
+
+.programs-overview .program-item.reverse {
+  flex-direction: column;
+}
+
+.programs-overview .image-placeholder {
+  width:100%;
+  height:350px;
+}
+
+.programs-overview .program-details {
+  width:100%;
+  margin-top:15px;
+}
+
+.enrollment-section .steps-list {
+  grid-template-columns:1fr;
+}
+
+.requirements-section {
+  flex-direction: column;
+  column-gap:0;
+}
+
+.requirements-section .requirement-body-content,
+.requirements-section .form-downloads{
+  width:100%;
+}
+
+.faq-contact-section .faq-contact-grid {
+  column-gap:0;
+  row-gap:30px;
+  grid-template-columns:1fr;
+  width:80%;
+}
+
+.info-section .info-grid {
+  column-gap:0px;
+  row-gap:15px;
+  grid-template-columns:1fr;
+}
+
+.features-section .feature-icon {
+  margin-bottom:2px;
+}
+}
+
+@media screen and (max-width:600px) and (min-width:480px) {
+.parent {
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.nav-links-container{
+  width:50%;
+}
+
+.home-banner-content h1{
+  font-size:35px;
+}
+
+.home-banner-content div {
+  column-gap:20px;
+}
+
+.home-banner-content div a {
+  padding:12px 15px;
+  border-radius:18px;
+}
+
+.home-banner-img img{
+  width:250px;
+}
+
+.features-section .features-title {
+  font-size:24.5px;
+}
+
+.features-section .features-subtitle,
+.programs-section .programs-subtitle,
+.testimonial-section .testimonials-subtitle {
+  font-size:15px;
+  max-width:90%;
+}
+
+.programs-section .programs-title,
+.testimonial-section .testimonials-title {
+  font-size:28px;
+}
+
+
+.join-family-section .join-family-title {
+  font-size:35px;
+}
+
+.join-family-section .join-family-description {
+  font-size:16px;
+  max-width:95%;
+}
+
+.footer-flex-container {
+  grid-template-columns:30% 65%;
+  column-gap:5%;
+}
+
+.footer-bottom {
+  font-size:14px;
+}
+
+.pages-hero-section h1 {
+  font-size:36px;
+}
+
+.pages-hero-section p {
+  font-size:16px;
+}
+
+.mission-vision-section .mission-vision-content h2{
+  font-size:30px;
+  margin-bottom:2px;
+}
+
+.mission-vision-section .mission-vision-content p {
+  font-size:16px;
+  margin-bottom:10px;
+}
+
+.values-section .value-card{
+  width:75%;
+}
+
+.programs-overview .program-header h2 {
+  font-size:21.5px;
+}
+
+.programs-overview .program-desc {
+  width:92%;
+}
+
+.enrollment-section .section-header h2 {
+  font-size:35px;
+}
+
+.enrollment-section .section-header p {
+  font-size:16px;
+}
+
+.enrollment-section .step-number {
+  height:50px;
+  width:50px;
+  font-size:20px;
+}
+
+.requirements-section .requirement-body-content p {
+  width:90%;
+}
+
+.cta-section p,
+.faq-contact-section p.faq-contact-subheading{
+  width:96%;
+}
+
+.faq-section {
+  padding:60px 5%;
+}
+
+.faq-section .faq-header h2 {
+  font-size:28px; 
+}
+
+.faq-section .faq-question {
+  padding:24px 10px;
+  font-size:13px;
+}
+
+.faq-section .faq-answer {
+  padding:5px 10px 10px 10px;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size:14px;
+}
+
+.form-section .location-map p,
+.tour-scheduling-time p,
+.form-section .tour-scheduling-time .thing-to-meet p{
+  font-size:15px;
+}
+
+}
+
+@media screen and (max-width:480px) {
+.form-section .form-container .form-row {
+  grid-template-columns:1fr;
+  column-gap:0;
+  row-gap:20px;
+}
+
+
+/* .form-section .location-map p,
+.tour-scheduling-time p,
+.form-section .tour-scheduling-time .thing-to-meet p{
+  font-size:15px;
+} */
+}
+
+
+@media screen and (max-width:480px) and (min-width:380px) {
+
+.parent {
+  padding-left:12px;
+  padding-right:12px;
+}
+
+.nav-links-container{
+  width:65%;
+}
+
+.home-banner-content h1{
+  font-size:28px;
+}
+
+.home-banner-content div a {
+  padding:10px 8px;
+  border-radius:15px;
+  font-size:14px;
+}
+
+.home-banner-img img{
+  width:230px;
+}
+
+.features-section .features-title {
+  font-size:19px;
+}
+
+.features-section .features-subtitle,
+.programs-section .programs-subtitle,
+.testimonial-section .testimonials-subtitle {
+  font-size:14.5px;
+  max-width:97%;
+}
+
+.programs-section .programs-title,
+.testimonial-section .testimonials-title {
+  font-size:26px;
+}
+
+.programs-section .program-name {
+  font-size:24px;
+}
+
+.join-family-section .join-family-title {
+  font-size:28px;
+}
+
+.join-family-section .join-family-description {
+  font-size:16px;
+  max-width:96%;
+}
+
+.join-family-section .join-family-buttons {
+    column-gap:15px;
+}
+
+.footer-list li, .footer-text, .footer-link {
+  font-size: 14.2px;
+}
+
+
+.pages-hero-section h1 {
+  font-size:32px;
+}
+
+.pages-hero-section p {
+  font-size:15px;
+}
+
+.mission-vision-section .mission-vision-content h2{
+  font-size:28px;
+  margin-bottom:2px;
+}
+
+.mission-vision-section .mission-vision-content p {
+  font-size:15.5px;
+  margin-bottom:10px;
+}
+
+.values-section .value-card{
+  width:90%;
+}
+
+.values-section .header,
+.philosophy-section .header,
+.team-section h2 {
+  font-size:32px;
+}
+
+.values-section .sub-header {
+  font-size:15px;
+}
+
+.team-section p.team-subtitle {
+  font-size: 15px;
+}
+
+.team-section .team-grid .grid-card {
+  width: 95%;
+}
+
+.team-section .team-grid .grid-card p.bio {
+  width: 96%;
+}
+
+.programs-overview .program-header h2 {
+  font-size:21.5px;
+}
+
+.schedules h2 {
+  font-size:32px;
+}
+
+.schedules .schedule-card {
+  padding: 20px 12px;
+}
+
+.schedules ul li {
+  font-size:15px;
+}
+
+.schedules .clock-icon {
+    margin-right:4px;
+    font-size: 12px;
+}
+
+.programs-overview .program-desc {
+  width:95%;
+}
+
+.schedules .schedule-header {
+  font-size: 16px;
+}
+
+.enrollment-section .section-header h2 {
+  font-size:30px;
+}
+
+.enrollment-section .section-header p {
+  font-size:15px;
+}
+
+.requirements-section .requirement-body-content p {
+  width:95%;
+}
+
+.requirements-section .requirement-body-content p, .requirements-section .requirement-body-content li {
+  font-size: 15px;
+}
+
+.cta-section h2, .faq-contact-section h2.faq-contact-heading {
+  font-size:32px;
+}
+
+.cta-section p,
+.faq-contact-section p.faq-contact-subheading{
+  width:98%;
+  font-size:16px;
+}
+
+
+.cta-section .cta-buttons a,
+.faq-contact-section .contact-buttons a{
+  padding:10px 14px;
+}
+
+.cta-section .cta-buttons a.btn-tour,
+.faq-contact-section .contact-buttons a.btn-tour {
+  margin-right:20px;
+}
+
+.faq-section {
+  padding:60px 4%;
+}
+
+.faq-section .faq-header h2 {
+  font-size:25px; 
+}
+
+.faq-section .faq-question {
+  padding:24px 10px;
+  font-size:13px;
+}
+
+.faq-section .faq-answer {
+  padding:5px 10px 10px 10px;
+  border-top: 1px solid #eee;
+  color: #666;
+  font-size:13.5px;
+}
+
+.form-section .location-map p,
+.tour-scheduling-time p,
+.form-section .tour-scheduling-time .thing-to-meet p{
+  font-size:15px;
+}
+}
+
+@media screen  and (max-width:380px){
+  
 }

@@ -55,6 +55,16 @@ const Home = () => {
                     <img src={IMAGES.crawlingBaby} alt="baby crawling" />
                 </div>
 
+                <div className="hero-mobile-links">
+                    
+                    <Link to="/admissions" className="enrol-link bouncy">
+                        Enrol Your Child
+                    </Link>
+                    <Link to="/our-programs" className="programs-link bouncy">
+                    Explore Our Programs
+                    </Link>
+                </div>
+
             </section>
 
             <section className="features-section parent" data-aos="fade-up">

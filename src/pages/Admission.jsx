@@ -25,7 +25,7 @@ const Admission = () => {
     <Layout title='Admissions - Exceeding Grace'>
 
         <section className="pages-hero-section admission parent">
-            <h1 data-aos='fade-right'>Join Our Exceeding Grace Family</h1>
+            <h1 data-aos='fade-right'>Join Exceeding Grace</h1>
             <p data-aos='fade-right'>
             We're excited to welcome your child into our nurturing, culturally rich environment. Start your enrollment journey today!
             </p>
