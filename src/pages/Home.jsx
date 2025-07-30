@@ -43,10 +43,10 @@ const Home = () => {
                     <div>
                        
                         <Link to="/admissions" className="enrol-link bouncy">
-                            Enrol Your Child
+                            Enrol Now
                         </Link>
                         <Link to="/our-programs" className="programs-link bouncy">
-                        Explore Our Programs
+                            Our Programs
                         </Link>
                     </div>
                 </div>
@@ -165,8 +165,8 @@ const Home = () => {
                 Give your child the gift of a nurturing, faith-inspired early childhood experience. Schedule a tour today and discover why families trust Exceeding Grace Daycare for a strong start.
                 </p>
                 <div className="join-family-buttons">
-                <Link to="/contact-us" className="schedule-a-tour bouncy">Schedule a Tour</Link>
-                <Link to="/admissions" className="start-enrollment bouncy">Start Enrollment</Link>
+                    <Link to="/contact-us" className="schedule-a-tour bouncy">Schedule a Tour</Link>
+                    <Link to="/admissions" className="start-enrollment bouncy">Start Enrollment</Link>
                 </div>
             </section>
 
