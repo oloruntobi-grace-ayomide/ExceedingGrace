@@ -138,7 +138,7 @@ const Faq = () => {
     return (
         <Layout title="FAQ - Exceeding Grace">
             <section className="pages-hero-section faq parent">
-                <h1 data-aos='fade-right'>Frequently Asked Questions</h1>
+                <h1 data-aos='fade-right'>FAQS</h1>
                 <p data-aos='fade-right'>
                     Find answers to common questions about Exceeding Grace Daycare...
                 </p>
