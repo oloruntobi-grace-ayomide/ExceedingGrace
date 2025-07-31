@@ -17,22 +17,24 @@ const Footer = () => {
                         Dedicated to providing a safe, loving, and inspiring environment where every child can grow, learn, and thrive.
                     </p>
                 </div>
+                <div className="footer-flex-container">
 
-                <div data-aos="fade-up">
-                    <h4 className="footer-heading">Quick Links</h4>
-                    <ul className="footer-list">
-                        <li><Link href="/about" className="footer-link">About Us</Link></li>
-                        <li><Link href="/programs" className="footer-link">Programs</Link></li>
-                        <li><Link href="/admissions" className="footer-link">Admissions</Link></li>
-                        <li><Link href="/contact" className="footer-link">Contact</Link></li>
-                    </ul>
-                </div>
+                    <div data-aos="fade-up">
+                        <h4 className="footer-heading">Quick Links</h4>
+                        <ul className="footer-list">
+                            <li><Link href="/about" className="footer-link">About Us</Link></li>
+                            <li><Link href="/programs" className="footer-link">Programs</Link></li>
+                            <li><Link href="/admissions" className="footer-link">Admissions</Link></li>
+                            <li><Link href="/contact" className="footer-link">Contact</Link></li>
+                        </ul>
+                    </div>
 
-                <div data-aos="fade-up">
-                    <h4 className="footer-heading">Contact Info</h4>
-                    <p className="footer-text"><MdLocationOn/> 13 NNPC Housing Estate , Opposite field, Mosimi, Ogun-State</p>
-                    <p className="footer-text"><MdCall/> +234 813 508 7130</p>
-                    <p className="footer-text"><MdOutlineMail/> eunicebishop80@gmail.com</p>
+                    <div data-aos="fade-up">
+                        <h4 className="footer-heading">Contact Info</h4>
+                        <p className="footer-text"><MdLocationOn/> 13 NNPC Housing Estate , Opposite field, Mosimi, Ogun-State</p>
+                        <p className="footer-text"><MdCall/> +234 813 508 7130</p>
+                        <p className="footer-text"><MdOutlineMail/> eunicebishop80@gmail.com</p>
+                    </div>
                 </div>
             </div>
 
