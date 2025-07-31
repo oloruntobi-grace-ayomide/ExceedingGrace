@@ -41,6 +41,11 @@ html {
 
 body {
   background-color:var(--white-color);
+  overflow-x: hidden;
+}
+
+.section{
+  overflow-x: hidden;
 }
 
 .parent {
@@ -106,8 +111,8 @@ body {
     font-weight:600;
     font-size:15px;
     padding:5px 2px;
-    /* color:#888888; */
-    color:var(--deep-pink-color);
+    color:#888888;
+    /* color:var(--deep-pink-color); */
     border-bottom:solid 2px transparent;
     transition:border 0.5s ease-in-out, color 0.5s ease-in-out;
 }
@@ -1693,10 +1698,6 @@ option[disabled], input[type="date"]{
   padding: 20px 12px;
 }
 
-.pages-hero-section.admission p  {
-  font-size:17px;
-}
-
 .enrollment-section .step-item {
   column-gap:20px;
 }
@@ -2081,7 +2082,12 @@ option[disabled], input[type="date"]{
   background-color:transparent;
   border: none;
   font-size:25px;
-  color:var(--deep-pink-color);
+  color:#888888;
+  /* color:var(--deep-pink-color); */
+}
+
+.burger-toggler.active {
+  color:var(--deep-blue-color);
 }
 
 .nav-links-container{
@@ -2449,7 +2455,7 @@ option[disabled], input[type="date"]{
 .home-banner {
   flex-direction: column;
   padding-top:40px;
-  padding-bottom:30px;
+  padding-bottom:0px;
 }
 
 .home-banner-content {
@@ -2471,7 +2477,10 @@ option[disabled], input[type="date"]{
 
 .home-banner-img {
   margin-left:unset;
-  padding:10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding:10px 0px 0px 0px;
 }
 
 .features-section .features-grid,
@@ -2755,6 +2764,10 @@ option[disabled], input[type="date"]{
   column-gap:0;
   row-gap:20px;
 }
+
+.logo img{
+  width:65px;
+}
 }
 
 @media screen and (max-width:480px) and (min-width:380px) {
@@ -2818,7 +2831,6 @@ option[disabled], input[type="date"]{
 .footer-list li, .footer-text, .footer-link {
   font-size: 14.2px;
 }
-
 
 .pages-hero-section h1 {
   font-size:32px;
@@ -3059,6 +3071,15 @@ option[disabled], input[type="date"]{
   max-width:98%;
 }
 
+.join-family-section .join-family-buttons {
+  gap: 10px;
+}
+
+.join-family-section .join-family-buttons a {
+  padding: 12px 13px;
+  font-size:14px;
+}
+
 .footer-flex-container {
   grid-template-columns: auto;
   row-gap:20px;
@@ -3144,7 +3165,7 @@ option[disabled], input[type="date"]{
 }
 
 .schedules ul li {
-  font-size:15px;
+  font-size:14.5px;
 }
 
 .special-programs .special-programs-header,
@@ -3163,77 +3184,87 @@ option[disabled], input[type="date"]{
 .enrollment-section .step-info span {
   font-size:15px;
 }
-  /*
-
-.programs-overview .program-desc {
-  width:95%;
-}
-
-.schedules .schedule-header {
-  font-size: 16px;
-}
-
-.enrollment-section .section-header h2 {
-  font-size:30px;
-}
-
-.enrollment-section .section-header p {
-  font-size:15px;
-}
-
-.requirements-section .requirement-body-content p {
-  width:95%;
-}
 
 .requirements-section .requirement-body-content p, .requirements-section .requirement-body-content li {
   font-size: 15px;
 }
 
 .cta-section h2, .faq-contact-section h2.faq-contact-heading {
-  font-size:32px;
+  font-size: 28px;
 }
 
-.cta-section p,
-.faq-contact-section p.faq-contact-subheading{
-  width:98%;
-  font-size:16px;
+.cta-section p, .faq-contact-section p.faq-contact-subheading {
+  font-size: 15px;
+  width: 98%;
 }
-
 
 .cta-section .cta-buttons a,
 .faq-contact-section .contact-buttons a{
-  padding:10px 14px;
+  padding:11px 10px;
+  font-size:14px;
 }
 
-.cta-section .cta-buttons a.btn-tour,
-.faq-contact-section .contact-buttons a.btn-tour {
-  margin-right:20px;
+.cta-section .cta-buttons a.btn-tour, .faq-contact-section .contact-buttons a.btn-tour {
+  margin-right:10px;
+}
+
+.quick-info-section .quick-info-card,
+.info-section .info-card{
+  padding: 12px 12px;
+  width:94%;
+}
+
+.quick-info-section .quick-info-icon, .info-section .info-icon {
+  margin-bottom:3px;
 }
 
 .faq-section {
-  padding:60px 4%;
+  padding:60px 2%;
 }
 
 .faq-section .faq-header h2 {
-  font-size:25px; 
+  font-size:22px; 
 }
 
 .faq-section .faq-question {
-  padding:24px 10px;
+  padding:20px 6px;
   font-size:13px;
 }
 
 .faq-section .faq-answer {
-  padding:5px 10px 10px 10px;
-  border-top: 1px solid #eee;
-  color: #666;
+  padding:5px 6px 10px 8px;
   font-size:13.5px;
+}
+
+.faq-contact-section .faq-contact-grid {
+  width:92%;
+}
+
+.faq-contact-section .faq-contact-card {
+  padding: 20px 10px;
+}
+
+.faq-contact-section .faq-contact-card p {
+  font-size: 15px;
+}
+
+.info-section .info {
+  font-size:15px;
+}
+
+.form-section .form-container h2,
+.form-section .location-map h2, 
+.form-section .tour-scheduling-time h2{
+  font-size:23px;
 }
 
 .form-section .location-map p,
 .tour-scheduling-time p,
 .form-section .tour-scheduling-time .thing-to-meet p{
-  font-size:15px;
+  font-size:14.5px;
 }
- */
+
+.footer-list li, .footer-text, .footer-link {
+  font-size: 14px;
+}
 }

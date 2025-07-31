@@ -66,7 +66,7 @@ const Navigation = () => {
           </Link>
 
           <button
-            className="burger-toggler"
+            className={`burger-toggler ${isOpen ?'active' : ''}`}
             aria-label="Toggle navigation"
             aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}> 
