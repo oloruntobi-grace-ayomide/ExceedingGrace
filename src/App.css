@@ -41,11 +41,14 @@ html {
 
 body {
   background-color:var(--white-color);
+}
+
+body{
   overflow-x: hidden;
 }
 
-.section{
-  overflow-x: hidden;
+#root {
+  overflow: hidden;
 }
 
 .parent {
@@ -2102,6 +2105,8 @@ option[disabled], input[type="date"]{
   padding-left: 20px;
   padding-right:20px;
   flex-direction: column;
+  align-items: unset;
+  justify-content: unset;
   z-index: 9999;
   background-color:var(--white-color);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -2931,7 +2936,6 @@ option[disabled], input[type="date"]{
   font-size:16px;
 }
 
-
 .cta-section .cta-buttons a,
 .faq-contact-section .contact-buttons a{
   padding:10px 14px;
@@ -2940,6 +2944,12 @@ option[disabled], input[type="date"]{
 .cta-section .cta-buttons a.btn-tour,
 .faq-contact-section .contact-buttons a.btn-tour {
   margin-right:20px;
+}
+
+.quick-info-section .quick-info-card, .info-section .info-card {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq-section {
@@ -3006,7 +3016,7 @@ option[disabled], input[type="date"]{
 .features-section .features-subtitle,
 .programs-section .programs-subtitle,
 .testimonial-section .testimonials-subtitle {
-  font-size:13.5px;
+  font-size:14.5px;
   max-width:99%;
 }
 
@@ -3212,6 +3222,8 @@ option[disabled], input[type="date"]{
 .info-section .info-card{
   padding: 12px 12px;
   width:94%;
+  margin-left: auto;
+  margin-right:auto;
 }
 
 .quick-info-section .quick-info-icon, .info-section .info-icon {
@@ -3262,6 +3274,23 @@ option[disabled], input[type="date"]{
 .tour-scheduling-time p,
 .form-section .tour-scheduling-time .thing-to-meet p{
   font-size:14.5px;
+}
+
+.footer-logo-name {
+  column-gap:3px;
+}
+
+.footer-logo-name h4 {
+  font-size:19px;
+  text-align: left;
+}
+
+.footer-grid {
+  text-align: center;
+}
+
+.footer-cards:not(:last-child) {
+  border-bottom: solid 1px var(--white-color);
 }
 
 .footer-list li, .footer-text, .footer-link {
