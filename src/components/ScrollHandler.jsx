@@ -5,10 +5,13 @@ const ScrollHandler = ({children}) => {
         if (hash) {
             const element = document.querySelector(hash);
             if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+                const timeoutId = setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+                return () => clearTimeout(timeoutId); // Cleanup
             }
         }
-    },100);
+        }, []);
     return(
         <>{children}</>
     )

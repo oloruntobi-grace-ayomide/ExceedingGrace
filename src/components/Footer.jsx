@@ -8,7 +8,7 @@ const Footer = () => {
 
             <div className="footer-grid">
 
-                <div className="footer-motto-logo" data-aos="fade-up">
+                <div className="footer-motto-logo footer-cards" data-aos="fade-up">
                     <div className="footer-logo-name">
                         <img src={IMAGES.logo} alt="Exceeding Grace Daycare" className="footer-logo"/>
                         <h4>Exceeding Grace Daycare</h4> 
@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-flex-container">
 
-                    <div data-aos="fade-up">
+                    <div className="footer-cards" data-aos="fade-up">
                         <h4 className="footer-heading">Quick Links</h4>
                         <ul className="footer-list">
                             <li><Link href="/about" className="footer-link">About Us</Link></li>
@@ -29,7 +29,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div data-aos="fade-up">
+                    <div className="footer-cards" data-aos="fade-up">
                         <h4 className="footer-heading">Contact Info</h4>
                         <p className="footer-text"><MdLocationOn/> 13 NNPC Housing Estate , Opposite field, Mosimi, Ogun-State</p>
                         <p className="footer-text"><MdCall/> +234 813 508 7130</p>
